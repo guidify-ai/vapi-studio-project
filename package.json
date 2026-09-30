@@ -14,21 +14,21 @@
     "test": "echo \"Add tests under test/ — see sample landing LLM for patterns\""
   },
   "dependencies": {
-    "@guidify-ai/vapi-studio": "0.1.0",
-    "@nestjs/common": "^11.0.12",
-    "@nestjs/core": "^11.0.12",
-    "@nestjs/platform-express": "^11.0.12",
-    "@nestjs/typeorm": "^11.0.0",
-    "pg": "^8.14.1",
-    "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.2",
-    "typeorm": "^0.3.21",
-    "yaml": "^2.7.0"
+    "@guidify-ai/vapi-studio": "0.1.1",
+    "@nestjs/common": "11.1.29",
+    "@nestjs/core": "11.1.29",
+    "@nestjs/platform-express": "11.1.29",
+    "@nestjs/typeorm": "11.0.3",
+    "pg": "8.14.1",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2",
+    "typeorm": "0.3.31",
+    "yaml": "2.9.0"
   },
   "devDependencies": {
-    "@types/express": "^5.0.1",
-    "@types/node": "^22.13.10",
-    "typescript": "^5.8.2"
+    "@types/express": "5.0.1",
+    "@types/node": "22.13.10",
+    "typescript": "5.8.2"
   },
   "repository": {
     "type": "git",
