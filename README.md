@@ -15,7 +15,7 @@ Clone + `yarn start` is **not** enough by itself. Fill `.env` for the path you a
 
 ### A. Machine
 
-- [ ] Node 22+, Yarn or npm  
+- [ ] Node 22.23.4+ or 24.22.1+, Yarn or npm  
 - [ ] Docker Compose  
 - [ ] [ngrok](https://ngrok.com/download)  
 

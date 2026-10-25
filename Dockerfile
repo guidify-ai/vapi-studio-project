@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.7
-FROM node:24-bookworm-slim AS build
+FROM node:24.22.1-bookworm-slim AS build
 
 RUN corepack enable && corepack prepare yarn@1.22.22 --activate
 
@@ -21,7 +21,7 @@ COPY config ./config
 RUN node -e "const fs=require('fs'); const p=JSON.parse(fs.readFileSync('package.json','utf8')); p.dependencies['@guidify-ai/vapi-studio']='file:/pkg/vapi-studio'; fs.writeFileSync('package.json', JSON.stringify(p,null,2));" \
   && yarn install && yarn build
 
-FROM node:24-bookworm-slim AS runtime
+FROM node:24.22.1-bookworm-slim AS runtime
 WORKDIR /workspace
 COPY --from=build /pkg/vapi-studio /pkg/vapi-studio
 COPY --from=build /app /app
