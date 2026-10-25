@@ -17,7 +17,7 @@
     "test": "echo \"Add tests under test/ — see sample landing LLM for patterns\""
   },
   "dependencies": {
-    "@guidify-ai/vapi-studio": "file:../vapi-studio",
+    "@guidify-ai/vapi-studio": "0.2.0",
     "@nestjs/common": "11.1.29",
     "@nestjs/core": "11.1.29",
     "@nestjs/platform-express": "11.1.29",
