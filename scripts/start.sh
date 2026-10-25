@@ -60,6 +60,8 @@ if [[ ! -f docker-compose.yaml && ! -f docker-compose.yml ]]; then
   exit 1
 fi
 
+bash "$ROOT/scripts/require-vapi-env.sh" "$ROOT/.env"
+
 echo ">> Project ${PROJECT_NAME} (${PROJECT_SLUG}) on :${PORT}"
 docker compose up -d --build
 
@@ -143,6 +145,12 @@ else
   echo "Project:                ${PROJECT_NAME} (${PROJECT_SLUG})"
   echo "Webhook endpoint:       ${public_url}/vapi/webhook"
   echo "Conversation endpoint:  ${public_url}/vapi/chat/completions"
+  echo
+  echo ">> Configuring Vapi — claim POC_ASSISTANT_ID onto phone"
+  bash "$ROOT/scripts/configure-vapi.sh" || {
+    echo ">> Vapi configure failed — set VAPI_API_KEY, POC_ASSISTANT_ID, VAPI_PHONE_NUMBER_ID" >&2
+    exit 1
+  }
   echo
 fi
 

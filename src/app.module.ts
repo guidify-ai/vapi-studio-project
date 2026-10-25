@@ -33,6 +33,9 @@ import { GoodbyeNode } from './conversation/nodes/goodbye.node';
     VapiStudioModule.forRoot({
       entryPoint: AppConversationEntry,
       brainAdapter: MockBrainAdapter,
+      limits: {
+        endMessage: "We've reached the end of our time — thanks for calling. Goodbye.",
+      },
       nodes: [
         { className: 'GreetNode', useClass: GreetNode },
         { className: 'GoodbyeNode', useClass: GoodbyeNode },
